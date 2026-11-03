@@ -1,0 +1,2 @@
+# Overrides a global ignore rule: CLAUDE.md imports AGENTS.md for Claude Code contributors
+!CLAUDE.md
