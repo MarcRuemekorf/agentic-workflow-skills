@@ -1,6 +1,7 @@
 ---
 name: test
 description: Proves a built feature meets its spec by checking every acceptance criterion against a passing test or a manual check the user performs, and records the result in the Evidence table of docs/specs/<feature>/plan.md. Use when the user runs /test or asks to verify that a feature works.
+disable-model-invocation: true
 ---
 
 # Test

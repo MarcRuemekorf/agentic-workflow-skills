@@ -1,6 +1,7 @@
 ---
 name: inspect
 description: Reviews a branch before merge against its spec, plan, evidence, and CONSTRAINTS.md, reports ranked findings with a merge verdict, and offers to fix them test-first. Use when the user runs /inspect or asks for a review before merging.
+disable-model-invocation: true
 ---
 
 # Inspect

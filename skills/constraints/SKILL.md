@@ -1,6 +1,7 @@
 ---
 name: constraints
 description: Sets a project's quality bar once and enforces it everywhere, by writing CONSTRAINTS.md and setting up the type-check, lint, format, test, pre-commit, and CI tooling that checks it. Use when the user runs /constraints, sets up a project for the workflow, or wants to change the project's quality rules.
+disable-model-invocation: true
 ---
 
 # Constraints

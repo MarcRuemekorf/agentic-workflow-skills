@@ -1,6 +1,7 @@
 ---
 name: prepare
 description: Turns an approved spec into an approved plan of small, ordered, test-first tasks, written to docs/specs/<feature>/plan.md. Use when the user runs /prepare or asks to plan how to build a feature that already has a spec.
+disable-model-invocation: true
 ---
 
 # Prepare

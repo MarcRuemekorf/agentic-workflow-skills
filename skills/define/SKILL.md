@@ -1,6 +1,7 @@
 ---
 name: define
 description: Turns a feature request into an approved spec with testable acceptance criteria, written to docs/specs/<feature>/spec.md. Use when the user runs /define or asks to define or specify what to build, before any planning or code.
+disable-model-invocation: true
 ---
 
 # Define

@@ -1,0 +1,7 @@
+{
+  "name": "workflow",
+  "version": "0.1.0",
+  "description": "Agentic development workflow: /constraints, /define, /prepare, /build, /test, /inspect.",
+  "author": { "name": "Marc Ruemekorf" },
+  "repository": "https://github.com/MarcRuemekorf/agentic-workflow-skills"
+}

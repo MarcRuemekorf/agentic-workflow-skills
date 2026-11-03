@@ -1,6 +1,7 @@
 ---
 name: build
 description: Builds a feature from its approved plan, one test-first task at a time, ticking each task in docs/specs/<feature>/plan.md and committing per task if the user agrees. Use when the user runs /build or asks to implement a feature that already has an approved plan.
+disable-model-invocation: true
 ---
 
 # Build

@@ -1,0 +1,14 @@
+{
+  "name": "agentic-workflow-skills",
+  "owner": {
+    "name": "Marc Ruemekorf"
+  },
+  "description": "Skills for an agentic software development workflow, from definition to review.",
+  "plugins": [
+    {
+      "name": "workflow",
+      "source": "./",
+      "description": "Agentic development workflow: /constraints, /define, /prepare, /build, /test, /inspect."
+    }
+  ]
+}
