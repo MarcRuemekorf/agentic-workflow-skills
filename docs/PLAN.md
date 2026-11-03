@@ -24,6 +24,8 @@ Six phase commands, each backed by a skill that names the helper skills it needs
 - **Explicit skill loading:** phase skills reference helper skills by path instead of relying on
   description-based auto-activation, which varies by model.
 - **Artifacts are committed** under `docs/specs/<feature>/` in the target project; `CONSTRAINTS.md` at its root.
+- **Templates live in the skill that writes them** (e.g. `skills/define/spec-template.md`), since installed
+  skills can only rely on their own directory. Templates are bare skeletons; rules live in the skills.
 - **`/constraints` enforces mechanically:** it writes the doc *and* generates linter, formatter, type-check,
   pre-commit and CI config. Only judgment-based rules stay prose-only.
 - **Stack recipes (v1):** TypeScript. Other stacks fall back to doc-only.

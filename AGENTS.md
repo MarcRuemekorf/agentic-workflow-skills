@@ -13,7 +13,7 @@ so wording is the product: ambiguity here becomes inconsistent behavior in someo
 ```
 skills/<name>/SKILL.md          one skill per directory; directory name == skill name
 skills/<name>/references/       detail loaded only when a step needs it
-templates/                      the artifact contract: spec.md, plan.md, CONSTRAINTS.md
+skills/<name>/*-template.md     the template for an artifact this skill writes
 examples/                       fixture project used to try skills out
 docs/                           plan and design notes for this repo
 ```
@@ -66,13 +66,22 @@ Every phase skill uses these sections, in this order:
 2. **Inputs** — the files it reads; what to do if one is missing (usually: stop and point to the
    phase that produces it).
 3. **Steps** — numbered. Mark each point where the agent must stop and get the user's confirmation.
-4. **Output** — the exact files it writes or updates, using the paths from `templates/`.
+4. **Output** — the exact files it writes or updates, using the paths from the artifact contract below.
 5. **Done when** — checkable exit criteria, and which phase comes next.
 
 ## The artifact contract
 
-Phases communicate only through files. `templates/` is the source of truth for their paths and
-structure. When you change a template, update every skill that reads or writes that artifact in the
+Phases communicate only through files in the target project:
+
+| Artifact                       | Written by     | Template                                        |
+| ------------------------------ | -------------- | ----------------------------------------------- |
+| `CONSTRAINTS.md`               | `constraints`  | `skills/constraints/constraints-template.md`    |
+| `docs/specs/<feature>/spec.md` | `define`       | `skills/define/spec-template.md`                |
+| `docs/specs/<feature>/plan.md` | `prepare`      | `skills/prepare/plan-template.md`               |
+
+A template lives in the skill that writes the artifact, because installed skills can only rely on
+files inside their own directory. Templates are bare skeletons; the rules for filling them belong in
+the skill. When you change a template, update every skill that reads or writes that artifact in the
 same change.
 
 ## Trying changes
